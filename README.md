@@ -4,33 +4,32 @@ Copy the template, paste it to your GitHub README and edit! -->
 
 # Project Title
 
-Final project for the Building AI course
+account clarification
 
 ## Summary
 
-Describe briefly in 2-3 sentences what your project is about. About 250 characters is a nice length! 
-
+Account clarification is a tast, that many companys have to deal with. Costumers which have monthly differnt bills often pays incorrect amounts to incorrect times that don´t fit the bill. To write reminder, so that companys get theire correct amount of money, companys need to break down the account and assign the Payments correctly to the bill. The programm could also add the reminder fees in the reminder.
 
 ## Background
 
-Which problems does your idea solve? How common or frequent is this problem? What is your personal motivation? Why is this topic important or interesting?
+My idea break the account down and sends warnings to the custumers automaticly. The problem is very common especially in property management. 
 
-This is how you make a list, if you need one:
-* problem 1
-* problem 2
-* etc.
+* problem 1: account clarification
+* problem 2: reminder sending
+
 
 
 ## How is it used?
 
 Describe the process of using the solution. In what kind situations is the solution needed (environment, time, etc.)? Who are the users, what kinds of needs should be taken into account?
+The programm get the account and break it down. A person should have a quick look, if everything is corrcect he can send out the final reminder to the custumer.
 
 Images will make your README look nice!
 Once you upload an image to your repository, you can link link to it like this (replace the URL with file path, if you've uploaded an image to Github.)
-![Cat](https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg)
+![Pfoto](...)
 
 If you need to resize images, you have to use an HTML tag, like this:
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg" width="300">
+<img src=<...>
 
 This is how you create code examples:
 ```
