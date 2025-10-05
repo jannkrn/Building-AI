@@ -8,11 +8,13 @@ account clarification
 
 ## Summary
 
-Account clarification is a tast, that many companys have to deal with. Costumers which have monthly differnt bills often pays incorrect amounts to incorrect times that don´t fit the bill. To write reminder, so that companys get theire correct amount of money, companys need to break down the account and assign the Payments correctly to the bill. The programm could also add the reminder fees in the reminder.
+Many companies need to resolve outstanding items in customer accounts because payments often don't exactly match invoices. My idea is an AI that automatically assigns incoming payments to the correct invoices, calculates balances, and creates reminders, including late payment fees.
+
+
 
 ## Background
 
-My idea break the account down and sends warnings to the custumers automaticly. The problem is very common especially in property management. 
+Incorrect or incomplete payments are a regular occurrence, particularly in the real estate and energy sectors. Manual reconciliation is error-prone and time-consuming.
 
 * problem 1: account clarification
 * problem 2: reminder sending
@@ -21,10 +23,10 @@ My idea break the account down and sends warnings to the custumers automaticly. 
 
 ## How is it used?
 
-Describe the process of using the solution. In what kind situations is the solution needed (environment, time, etc.)? Who are the users, what kinds of needs should be taken into account?
-The programm get the account and break it down. A person should have a quick look, if everything is corrcect he can send out the final reminder to the custumer.
+#Describe the process of using the solution. In what kind situations is the solution needed (environment, time, etc.)? Who are the users, what kinds of needs should be taken into account?
+Employees upload bank statements or open item lists. The system recognizes patterns (e.g., names, amounts, time frames), assigns the payments to invoices, and creates an overview. Open items can be automatically exported as reminders.
 
-Images will make your README look nice!
+#Images will make your README look nice!
 Once you upload an image to your repository, you can link link to it like this (replace the URL with file path, if you've uploaded an image to Github.)
 ![Pfoto](...)
 
@@ -33,20 +35,27 @@ If you need to resize images, you have to use an HTML tag, like this:
 
 This is how you create code examples:
 ```
-def main():
-   countries = ['Denmark', 'Finland', 'Iceland', 'Norway', 'Sweden']
-   pop = [5615000, 5439000, 324000, 5080000, 9609000]   # not actually needed in this exercise...
-   fishers = [1891, 2652, 3800, 11611, 1757]
+import pandas as pd
+data = {
+    "date": ["2025-01-01", "2025-01-05", "2025-01-10"],
+    "amount": [500, -200, -300],
+    "purposeofuse": ["bill 123", "custumer a payment", "rent january"]
+}
 
-   totPop = sum(pop)
-   totFish = sum(fishers)
+df = pd.DataFrame(data)
 
-   # write your solution here
+# solve saldo
+saldo = df["amount"].sum()
 
-   for i in range(len(countries)):
-      print("%s %.2f%%" % (countries[i], 100.0))    # current just prints 100%
+# identify open positions (simplified logic)
+df["assignment"] = df["purposeofuse"].apply(
+    lambda x: "rent" if "rent" in x else "bill" if "bill" in x else "unclear"
+)
 
-main()
+print(df)
+print("Saldo:", saldo)
+
+
 ```
 
 
@@ -60,9 +69,15 @@ If you need to use links, here's an example:
 | Header      | Title       |
 | Paragraph   | Text        |
 
+AI methods:
+NLP (Natural Language Processing)
+Clustering / Matching
+Rule-based logic
+
 ## Challenges
 
 What does your project _not_ solve? Which limitations and ethical considerations should be taken into account when deploying a solution like this?
+The AI_Method should exactly solve the descripted problem.
 
 ## What next?
 
