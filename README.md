@@ -23,17 +23,12 @@ Incorrect or incomplete payments are a regular occurrence, particularly in the r
 
 ## How is it used?
 
-#Describe the process of using the solution. In what kind situations is the solution needed (environment, time, etc.)? Who are the users, what kinds of needs should be taken into account?
 Employees upload bank statements or open item lists. The system recognizes patterns (e.g., names, amounts, time frames), assigns the payments to invoices, and creates an overview. Open items can be automatically exported as reminders.
 
-#Images will make your README look nice!
-Once you upload an image to your repository, you can link link to it like this (replace the URL with file path, if you've uploaded an image to Github.)
-![Pfoto](...)
 
-If you need to resize images, you have to use an HTML tag, like this:
-<img src=<...>
 
-This is how you create code examples:
+Simplifyed prototype of AI_Method:
+This just assign the example input to the groups: "rent", "bill" and "unclear".
 ```
 import pandas as pd
 data = {
@@ -57,17 +52,9 @@ print("Saldo:", saldo)
 
 
 ```
-
+So the inputs of the customer where assign. The next step is to clearify the "unclear" values and figuere out the differences of the groups to can exactly determine where the saldo comes from.
 
 ## Data sources and AI methods
-Where does your data come from? Do you collect it yourself or do you use data collected by someone else?
-If you need to use links, here's an example:
-[Twitter API](https://developer.twitter.com/en/docs)
-
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
 
 AI methods:
 NLP (Natural Language Processing)
@@ -76,8 +63,7 @@ Rule-based logic
 
 ## Challenges
 
-What does your project _not_ solve? Which limitations and ethical considerations should be taken into account when deploying a solution like this?
-The AI_Method should exactly solve the descripted problem.
+The AI_Method should exactly solve the descripted problem. Maybe somtimes the Method can not say if the assignment is 100% correct. 
 
 ## What next?
 
